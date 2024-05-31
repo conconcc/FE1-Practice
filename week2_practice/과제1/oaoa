@@ -1,1 +1,14 @@
+const students = [
+  { name: "Alice", score: 85 },
+  { name: "Bob", score: 58 },
+  { name: "Charlie", score: 77 }
+];
 
+const passingScore = 60;
+for (const student of students) {
+  if (student.score >= passingScore) {
+    console.log(`${student.name} has passed.`);
+  } else {
+    console.log(`${student.name} has failed.`);
+  }
+}
