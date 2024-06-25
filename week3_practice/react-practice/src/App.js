@@ -1,18 +1,17 @@
-import './App.css';
 import React, { useState } from 'react';
-
+import './App.css';
 
 function App() {
-  const [text, setText] = useState('초기 텍스트');
+  const [word, setWord] = useState('Hello');
 
   const handleClick = () => {
-    setText('변경된 텍스트');
-  };
+    setWord(prev => prev === "hello" ? "bye" : "hello")
+};
 
   return (
     <div>
-      <p>{text}</p>
-      <button onClick={handleClick}>텍스트 변경</button>
+      <div>{word}</div>
+      <button onClick={handleClick}>Change</button>
     </div>
   );
 }
